@@ -6,6 +6,7 @@ git add .
 git commit -m ""
 git push origin main 
 
+
 method : 2
 git branch                --> how many branch
 git branch branch name    --> given branch name
