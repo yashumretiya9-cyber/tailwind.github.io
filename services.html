@@ -8,9 +8,315 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./output.css" class="css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body class="bg-gray-900">
+     <header class="fixed top-0 left-0 w-full z-50 text-gray-400 body-font bg-gray-900/70 backdrop-blur-md border-b border-white/10">
+
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <img src="img/c5.png" alt="Food Shop" class="w-10 h-10 p-1 rounded-full" />
+      <span class="text-yellow-400 ml-3 text-xl">Restoran</span>
+    </a>
+
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href="index.html" class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer">Home</a>
+      <a href="about.html" class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer">About</a>
+      <a href="services.html" class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer">Services</a>
+      <a href="menu.html" class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer">Menu</a>
+
+      <!-- Dropdown -->
+      <div class="relative inline-block text-left">
+        <!-- Pages as <a> tag -->
+        <a id="menu-button"
+          class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer flex items-center">
+          Pages
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+
+        <div id="dropdown-list"
+          class="hidden absolute left-0 mt-2 w-44 bg-gray-800 border border-white/10 rounded-md shadow-xl z-50">
+          <a href="booking.html"
+            class="block px-4 py-2 text-sm text-yellow-400 hover:bg-yellow-400 hover:text-white transition font-bold">
+            Booking
+          </a>
+          <a href="team.html"
+            class="block px-4 py-2 text-sm text-yellow-400 hover:bg-yellow-400 hover:text-white transition font-bold">
+            Our Team
+          </a>
+          <a href="testimonial.html"
+            class="block px-4 py-2 text-sm text-yellow-400 hover:bg-yellow-400 hover:text-white transition font-bold">
+            Testimonial
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer">Contact</a>
+    </nav>
+
+    <!-- Edited Login button -->
+    <a href="login.html"
+      class="inline-flex text-black font-bold items-center bg-yellow-400 border-0 py-1 px-3 hover:bg-black hover:text-yellow-400 rounded text-base mt-4 md:mt-0">
+      Login
+    </a>
+
+  </div>
+</header>
+
+<!-- JavaScript -->
+<script>
+  const menuBtn = document.getElementById("menu-button");
+  const dropdown = document.getElementById("dropdown-list");
+
+  menuBtn.addEventListener("click", (e) => {
+    e.preventDefault(); // <a> tag click reload na kare
+    dropdown.classList.toggle("hidden");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!menuBtn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add("hidden");
+    }
+  });
+</script>
+
+<section class="relative bg-cover bg-center" style="background-image: url('img/bg-hero.jpg');">
+  <div class="bg-opacity-100">
+    <div class="container mx-auto text-center py-32">
+      <h1 class="text-5xl font-bold text-white mb-4">Services</h1>
+      
+      <!-- Breadcrumb Box -->
+      <div class="inline-block bg-black/80 px-6 py-2 rounded-md">
+        <nav class="text-white text-sm flex items-center justify-center space-x-2">
+          <a href="index.html" class="font-bold hover:text-orange-400">HOME</a>
+          <span>/</span>
+          <a href="#" class="font-bold hover:text-orange-400">PAGES</a>
+          <span>/</span>
+          <span>Services</span>
+        </nav>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- Our Services Section -->
+<section class="max-w-7xl mx-auto px-4 py-20 text-center">
+
+  <!-- Section Heading -->
+  <p class="text-orange-500 font-semibold mb-2 tracking-wide">
+    —— Our Services ——
+  </p>
+  <h2 class="text-4xl font-extrabold text-white mb-16">
+    Explore Our Services
+  </h2>
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- Card Template -->
+    <div class="relative group">
+      <!-- Glow Effect -->
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Master Chefs</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <!-- Duplicate for other cards with respective icons and titles -->
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Quality Food</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Online Order</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">24/7 Service</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <!-- Repeat for cards 5-8 with same glow structure -->
+      <div class="relative group">
+      <!-- Glow Effect -->
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Master Chefs</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <!-- Duplicate for other cards with respective icons and titles -->
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Quality Food</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Online Order</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-yellow-400 rounded-lg blur opacity-0 transition duration-500 group-hover:opacity-50 animate-pulse"></div>
+      <div class="relative bg-yellow-400 p-8 rounded-lg shadow-sm transition transform hover:scale-105 hover:shadow-lg">
+        <div class="text-orange-500 text-5xl mb-6 transition group-hover:text-yellow-500">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">24/7 Service</h3>
+        <p class="text-white text-lg leading-relaxed">
+          Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">Company</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">About Us</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Contact Us</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Reservation</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Privacy Policy</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">Contact</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">123 Street, New York, USA</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">+012 345 67890</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">info@example.com</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">+91 1234567890</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">Opening</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">Monday - Saturday</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">09AM - 09PM</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Sunday</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">10AM - 08PM</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">SUBSCRIBE</h2>
+        <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+          <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+            <label for="footer-field" class="leading-7 text-sm text-yellow-400">Placeholder</label>
+            <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-800 rounded border bg-opacity-40 border-gray-700 focus:bg-transparent focus:ring-2 focus:ring-yellow-900 focus:border-yellow-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <button class="lg:mt-2 xl:mt-0 shrink-0 inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Button</button>
+        </div>
+        <p class="text-gray-500 text-sm mt-2 md:text-left text-center">Bitters chicharrones fanny pack
+          <br class="lg:block hidden">waistcoat green juice
+        </p>
+      </div>
+    </div>
+  </div>
+ <div class="bg-gray-800 bg-opacity-75">
+  <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+    
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+      <img src="img/c5.png" alt="Food Shop" class="w-10 h-10 p-1 rounded-full bg-yellow-400" />
+      <span class="text-yellow-400 ml-3 text-xl font-bold">Restoran</span>
+    </a>
+    
+    
+    
+  </div>
+</div>
+</footer>
+
+
+
 </body>
 </html>
