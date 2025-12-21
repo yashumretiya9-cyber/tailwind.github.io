@@ -7,6 +7,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   
     <link rel="stylesheet" href="./output.css" class="css">
+    <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Custom font feel */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 <body class="bg-gray-900">
 
@@ -425,26 +434,104 @@
   </div>
 </section>
 
-<section class="text-gray-400 bg-gray-900 body-font relative">
-  <div class="absolute inset-0 bg-gray-900">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.873583485082!2d72.9386704750374!3d21.236860980465043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be045adbee88f8d%3A0x99dc8b5e9f896342!2sPasodara%20gam!5e0!3m2!1sen!2sin!4v1766067245356!5m2!1sen!2sin" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
-  <div class="container px-5 py-24 mx-auto flex">
-    <div class="lg:w-1/3 md:w-1/2 bg-gray-900 shadow-md rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
-      <h2 class="text-white text-lg mb-1 font-medium title-font">Feedback</h2>
-      <p class="leading-relaxed mb-5">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
-      <div class="relative mb-4">
-        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
-        <input type="email" id="email" name="email" class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="relative mb-4">
-        <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
-        <textarea id="message" name="message" class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-      </div>
-      <button class="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Button</button>
-      <p class="text-xs text-gray-400 text-opacity-90 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+
+
+
+
+<section class="w-full">
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+
+    <!-- Left Video Section -->
+    <div class="relative h-125 lg:h-150 overflow-hidden">
+
+      <!-- YouTube Autoplay + Loop Video -->
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/_av_lOp3xDc?autoplay=1&mute=1&loop=1&playlist=_av_lOp3xDc&controls=0&showinfo=0&modestbranding=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+
     </div>
+
+    <!-- Right Form -->
+    <div class="bg-[#0F172B] text-white px-6 md:px-12 py-16 flex items-center">
+      <div class="w-full max-w-xl">
+
+        <!-- Heading -->
+        <p class="text-orange-500 font-semibold mb-2 flex items-center gap-3">
+          Reservation
+          <span class="w-12 h-0.5 bg-orange-500"></span>
+        </p>
+
+        <h2 class="text-4xl font-extrabold mb-10">
+          Book A Table Online
+        </h2>
+
+        <!-- Form -->
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <input type="text" placeholder="Your Name"
+            class="w-full px-4 py-3 bg-transparent text-white border border-yellow-400 rounded-md
+            placeholder-gray-300 outline-none
+            hover:shadow-[0_0_15px_rgba(234,179,8,0.7)]
+            focus:shadow-[0_0_20px_rgba(234,179,8,1)]" />
+
+          <input type="email" placeholder="Your Email"
+            class="w-full px-4 py-3 bg-transparent text-white border border-yellow-400 rounded-md
+            placeholder-gray-300 outline-none
+            hover:shadow-[0_0_15px_rgba(234,179,8,0.7)]
+            focus:shadow-[0_0_20px_rgba(234,179,8,1)]" />
+
+          <input type="datetime-local"
+            class="w-full px-4 py-3 bg-transparent text-white border border-yellow-400 rounded-md
+            outline-none
+            hover:shadow-[0_0_15px_rgba(234,179,8,0.7)]
+            focus:shadow-[0_0_20px_rgba(234,179,8,1)]" />
+
+          <select
+            class="w-full px-4 py-3 bg-transparent text-white border border-yellow-400 rounded-md
+            outline-none
+            hover:shadow-[0_0_15px_rgba(234,179,8,0.7)]
+            focus:shadow-[0_0_20px_rgba(234,179,8,1)]">
+            <option class="text-black">People 1</option>
+            <option class="text-black">People 2</option>
+            <option class="text-black">People 3</option>
+            <option class="text-black">People 4</option>
+          </select>
+
+          <textarea rows="4" placeholder="Special Request"
+            class="md:col-span-2 w-full px-4 py-3 bg-transparent text-white border border-yellow-400 rounded-md
+            placeholder-gray-300 outline-none
+            hover:shadow-[0_0_15px_rgba(234,179,8,0.7)]
+            focus:shadow-[0_0_20px_rgba(234,179,8,1)]"></textarea>
+
+         <a href="book.html"
+   class="md:col-span-2 bg-orange-500 text-black font-semibold py-4 rounded-md
+          hover:bg-orange-600 transition text-center block">
+  BOOK NOW
+</a>
+
+
+        </form>
+      </div>
+    </div>
+
   </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -513,8 +600,8 @@
              alt="Chef">
       </div>
 
-      <h3 class="text-xl font-bold text-white">Full Name</h3>
-      <p class="text-gray-500 mb-4">Designation</p>
+      <h3 class="text-xl font-bold text-white">Arthurito Roman</h3>
+      <p class="text-gray-500 mb-4">Vegetable Pizza</p>
 
       <div class="flex justify-center space-x-4 mt-3">
         <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center
@@ -548,8 +635,8 @@
              alt="Chef">
       </div>
 
-      <h3 class="text-xl font-bold text-white">Full Name</h3>
-      <p class="text-gray-500 mb-4">Designation</p>
+      <h3 class="text-xl font-bold text-white">Roi Abroi</h3>
+      <p class="text-gray-500 mb-4">Chicken (ke Pork) Schnitze</p>
 
       <div class="flex justify-center space-x-4 mt-3">
         <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center
@@ -583,8 +670,8 @@
              alt="Chef">
       </div>
 
-      <h3 class="text-xl font-bold text-white">Full Name</h3>
-      <p class="text-gray-500 mb-4">Designation</p>
+      <h3 class="text-xl font-bold text-white">Stive Rojers</h3>
+      <p class="text-gray-500 mb-4">Mushroom ane Rocket</p>
 
       <div class="flex justify-center space-x-4 mt-3">
         <a class="w-10 h-10 bg-white rounded-full flex items-center justify-center

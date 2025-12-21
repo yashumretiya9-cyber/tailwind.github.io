@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./output.css" class="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-900">
+
+   <section class="min-h-screen flex items-center justify-center px-4 py-12">
+    <div
+      class="max-w-3xl w-full bg-gray-800 rounded-2xl p-8
+             border border-yellow-500/40
+             shadow-[0_0_25px_rgba(234,179,8,0.35)]
+             hover:shadow-[0_0_40px_rgba(234,179,8,0.6)]
+             transition duration-300">
+
+      <!-- Heading -->
+      <div class="text-center mb-8">
+        <p class="text-yellow-400 font-semibold tracking-wide mb-2">
+          —— Booking Form ——
+        </p>
+        <h2 class="text-3xl font-extrabold text-white">
+          Book Your Order
+        </h2>
+      </div>
+
+      <!-- Form -->
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Input Style (Reusable) -->
+
+        <!-- Customer Name -->
+        <div>
+          <label class="block mb-1 text-yellow-300 font-medium">Customer Name</label>
+          <input type="text" placeholder="Enter your name"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition">
+        </div>
+
+        <!-- Mobile Number -->
+        <div>
+          <label class="block mb-1 text-yellow-300 font-medium">Mobile Number</label>
+          <input type="tel" placeholder="Enter mobile number"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block mb-1 text-yellow-300 font-medium">Email Address</label>
+          <input type="email" placeholder="Enter email"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition">
+        </div>
+
+        <!-- Booking Date -->
+        <div>
+          <label class="block mb-1 text-yellow-300 font-medium">Booking Date</label>
+          <input type="date"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition">
+        </div>
+
+        <!-- Dish Name -->
+        <div>
+          <label class="block mb-1 text-yellow-300 font-medium">Dish Name</label>
+          <input type="text" placeholder="Enter dish name"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition">
+        </div>
+
+        <!-- Dish Image -->
+        <div>
+          <label class="block mb-1 text-yellow-300 font-medium">Dish Image</label>
+          <input type="file"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-yellow-300 rounded-lg px-4 py-2
+                   file:bg-yellow-500 file:border-none file:text-black file:px-4 file:py-1 file:rounded
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   focus:ring-2 focus:ring-yellow-400/60
+                   transition">
+        </div>
+
+        <!-- Address -->
+        <div class="md:col-span-2">
+          <label class="block mb-1 text-yellow-300 font-medium">Address</label>
+          <textarea rows="3" placeholder="Enter your address"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition"></textarea>
+        </div>
+
+        <!-- Feedback -->
+        <div class="md:col-span-2">
+          <label class="block mb-1 text-yellow-300 font-medium">Feedback</label>
+          <textarea rows="4" placeholder="Write your feedback"
+            class="w-full bg-gray-900 border border-yellow-500/40 text-white rounded-lg px-4 py-2
+                   focus:outline-none focus:border-yellow-400
+                   focus:ring-2 focus:ring-yellow-400/60
+                   hover:shadow-[0_0_12px_rgba(234,179,8,0.6)]
+                   transition"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="md:col-span-2 text-center mt-6">
+          <button
+            class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-12 py-3 rounded-full
+                   shadow-[0_0_20px_rgba(234,179,8,0.8)]
+                   hover:shadow-[0_0_35px_rgba(234,179,8,1)]
+                   transition duration-300">
+            Submit Booking
+          </button>
+        </div>
+
+      </form>
+       <div class="flex justify-center mt-4 space-x-4">
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-gray-900 hover:bg-[#1877F2] hover:text-white transition">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-gray-900 hover:bg-[#DB4437] hover:text-white transition">
+        <i class="fa-brands fa-google"></i>
+      </a>
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-gray-900 hover:bg-[#1DA1F2] hover:text-white transition">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-gray-900 hover:bg-[#E1306C] hover:text-white transition">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    </div>
+  </section>
+
+
+
+    
+</body>
+</html>
