@@ -23,7 +23,8 @@
 
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
-    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+    <!-- Logo -->
+    <a id="logo-btn" class="flex title-font font-medium items-center text-white mb-4 md:mb-0 cursor-pointer">
       <img src="img/c5.png" alt="Food Shop" class="w-10 h-10 p-1 rounded-full" />
       <span class="text-yellow-400 ml-3 text-xl">Restoran</span>
     </a>
@@ -36,7 +37,6 @@
 
       <!-- Dropdown -->
       <div class="relative inline-block text-left">
-        <!-- Pages as <a> tag -->
         <a id="menu-button"
           class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer flex items-center">
           Pages
@@ -66,7 +66,6 @@
       <a href="contact.html" class="mr-5 text-yellow-400 font-bold hover:text-white transition cursor-pointer">Contact</a>
     </nav>
 
-    <!-- Edited Login button -->
     <a href="login.html"
       class="inline-flex text-black font-bold items-center bg-yellow-400 border-0 py-1 px-3 hover:bg-black hover:text-yellow-400 rounded text-base mt-4 md:mt-0">
       Login
@@ -75,13 +74,23 @@
   </div>
 </header>
 
+<!-- Modal Card -->
+<div id="logo-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-gray-900 rounded-lg p-8 w-80 text-center relative">
+    <button id="modal-close" class="absolute top-2 right-2 text-yellow-400 hover:text-white font-bold">&times;</button>
+    <img src="img/c5.png" alt="Food Shop" class="w-24 h-24 mx-auto rounded-full mb-4" />
+    <h2 class="text-xl font-bold text-yellow-400 mb-2">Restoran</h2>
+    <p class="text-gray-400">Welcome to our restaurant! We serve delicious food with love and care. Visit us to enjoy a fine dining experience.</p>
+  </div>
+</div>
+
 <!-- JavaScript -->
 <script>
   const menuBtn = document.getElementById("menu-button");
   const dropdown = document.getElementById("dropdown-list");
 
   menuBtn.addEventListener("click", (e) => {
-    e.preventDefault(); // <a> tag click reload na kare
+    e.preventDefault();
     dropdown.classList.toggle("hidden");
   });
 
@@ -90,7 +99,28 @@
       dropdown.classList.add("hidden");
     }
   });
+
+  // Logo Modal
+  const logoBtn = document.getElementById("logo-btn");
+  const logoModal = document.getElementById("logo-modal");
+  const modalClose = document.getElementById("modal-close");
+
+  logoBtn.addEventListener("click", () => {
+    logoModal.classList.remove("hidden");
+  });
+
+  modalClose.addEventListener("click", () => {
+    logoModal.classList.add("hidden");
+  });
+
+  // Close modal if click outside card
+  logoModal.addEventListener("click", (e) => {
+    if (e.target === logoModal) {
+      logoModal.classList.add("hidden");
+    }
+  });
 </script>
+
 
 <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
